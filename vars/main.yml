@@ -1,0 +1,16 @@
+---
+# vars file for common_server
+
+# SSHD related
+sshd_banner_file: "/etc/motd"
+sshd_client_interval: "0"
+sshd_client_countmax: "3"
+sshd_log_level: "VERBOSE"
+sshd_login_grace: "120"
+sshd_max_sessions: "4"
+sshd_permit_root: "no"
+sshd_x11_forward: "no"
+sshd_tcp_forward: "yes"
+
+- name: include site specific variable file
+  include_vars: vars/site_{{ ansible_local.site.sitecode }}.yml

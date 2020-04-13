@@ -1,0 +1,4 @@
+---
+# tasks file for common_server
+# Task that sets the timezone and configures chrony
+- import_tasks: time.yml
