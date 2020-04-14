@@ -4,5 +4,5 @@
   include_vars: vars/common.yml
 
 # load site specific
-- name: include site specific variable file
-  include_vars: vars/site_{{sitecode}}.yml
+# - name: include site specific variable file
+#   include_vars: vars/site_{{sitecode}}.yml
