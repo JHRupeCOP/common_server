@@ -1,4 +1,7 @@
 ---
+- name: include site specific variable file
+  include_vars: vars/site_{{sitecode}}.yml
+
 # vars file for common_server
 
 # SSHD related
@@ -11,6 +14,3 @@ sshd_max_sessions: "4"
 sshd_permit_root: "no"
 sshd_x11_forward: "no"
 sshd_tcp_forward: "yes"
-
-- name: include site specific variable file
-  include_vars: vars/site_{{ ansible_local.site.sitecode }}.yml
