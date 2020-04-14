@@ -1,8 +1,8 @@
 ---
 # vars file for common_server
 - name: include common variable files
-    include_vars: vars/common.yml
+  include_vars: common.yml
 
 # load site specific
 - name: include site specific variable file
-    include_vars: vars/site_{{sitecode}}.yml
+  include_vars: site_{{sitecode}}.yml
