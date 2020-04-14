@@ -1,6 +1,7 @@
 ---
 # Time related
-time_zone: "America/Chicago"
+time_zone:
+  - "America/Chicago"
 chrony_config_server:
   - bvlntp1.conocophillips.net
   - bvlntp2.conocophillips.net
