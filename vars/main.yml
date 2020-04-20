@@ -3,6 +3,23 @@
 Common:
   time_zone: "America/Chicago"
 
-# load site specific
-- name: include site specific variable file
-  include_vars: site_{{ansible_local.site.sitecode}}.yml
+  chrony_config_server:
+    - bvlntp1.conocophillips.net
+    - bvlntp2.conocophillips.net
+    - hountp1.conocophillips.net
+
+  dns_server:
+    - 158.139.212.31
+    - 158.139.213.59
+    - 158.139.110.76
+# SSHD Related
+  SSHD:
+    banner_file: "/etc/motd"
+    client_interval: "0"
+    client_countmax: "3"
+    log_level: "VERBOSE"
+    login_grace: "120"
+    max_sessions: "4"
+    permit_root: "yes"
+    x11_forward: "no"
+    tcp_forward: "yes"
