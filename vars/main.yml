@@ -1,7 +1,7 @@
 ---
 # vars file for common_server
-# - name: include common variable files
-#   include_vars: common.yml
+Common:
+  time_zone: "America/Chicago"
 
 # load site specific
 - name: include site specific variable file

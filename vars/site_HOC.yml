@@ -1,6 +1,6 @@
 ---
 # Time related
-time_zone: "America/Chicago"
+
 chrony_config_server:
   - hountp1.conocophillips.net
   - hountp2.conocophillips.net
