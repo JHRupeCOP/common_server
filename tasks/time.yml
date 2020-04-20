@@ -1,7 +1,7 @@
 ---
 - name: Set the timezone
   timezone:
-    name: "{{ time_zone }}"
+    name: "{{ Common.time_zone }}"
     hwclock: UTC
 
 # Remove the NTP packages if they are installed, they conflict with chronyd

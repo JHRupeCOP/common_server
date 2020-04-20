@@ -4,8 +4,8 @@
 # Please consider joining the pool (http://www.pool.ntp.org/join.html).
 
 # List of NTP servers to use.
-{% for server in chrony_config_server %}
-server {{ server }} iburst
+{% for server in Common.chrony_config_server %}
+server {{ Common.chrony_config_server }} iburst
 {% endfor %}
 
 # Ignore stratum in source selection.
