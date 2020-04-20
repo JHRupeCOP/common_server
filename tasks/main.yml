@@ -1,4 +1,9 @@
 ---
 # tasks file for common_server
+
+- name: Include site specific variables
+  include_vars: site_{{ansible_local.site.sitecode}}.yml
+
 # Task that sets the timezone and configures chrony
-- import_tasks: time.yml
+- name:
+  import_tasks: time.yml
