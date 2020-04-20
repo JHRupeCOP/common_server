@@ -1,7 +1,7 @@
 ---
 # Site Bartlesville
 Common:
-  time_zone: {{ Common.time_zone }}
-  chrony_config_server: {{ Common.chrony_config_server }}
-  dns: {{ Common.dns }}
-  SSHD: {{ Common.SSHD }}
+  time_zone: "{{ Common.time_zone }}"
+  chrony_config_server: "{{ Common.chrony_config_server }}"
+  dns: "{{ Common.dns }}"
+  SSHD: "{{ Common.SSHD }}"
