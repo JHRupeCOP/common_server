@@ -23,4 +23,8 @@ Common:
     permit_root: yes
     x11_forward: no
     tcp_forward: yes
+    host_keys:
+      - ssh_host_ecdsa_key
+      - ssh_host_ed25519_key
+      - ssh_host_rsa_key
   time_zone: "America/Chicago"

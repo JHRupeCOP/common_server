@@ -1,10 +1,5 @@
 ---
-
-# Debug/sanity
-- debug:
-    msg:
-      - "Time zone: {{ Common.time_zone }}"
-      
+# Set the server timezone
 - name: Set the timezone
   timezone:
     name: "{{ Common.time_zone }}"
