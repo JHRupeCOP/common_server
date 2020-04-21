@@ -2,7 +2,6 @@
 # Time related
 
 Common:
-  time_zone: "{{ Common.time_zone }}"
   chrony_config_server:
     - hountp1.conocophillips.net
     - hountp2.conocophillips.net
@@ -12,4 +11,14 @@ Common:
       - 158.139.110.76
       - 158.139.44.10
       - 158.139.212.31
-  SSHD: "{{ Common.SSHD }}"
+  SSHD:
+    banner_file: /etc/motd
+    client_interval: 0
+    client_countmax: 3
+    log_level: VERBOSE
+    login_grace: 120
+    max_sessions: 4
+    permit_root: yes
+    x11_forward: no
+    tcp_forward: yes
+  time_zone: "America/Chicago"
