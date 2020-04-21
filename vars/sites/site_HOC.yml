@@ -21,4 +21,5 @@ Common:
     permit_root: yes
     x11_forward: no
     tcp_forward: yes
+    host_keys: 
   time_zone: "America/Chicago"

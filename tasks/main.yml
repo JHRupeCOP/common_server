@@ -5,7 +5,9 @@
       - "Site Code: {{ ansible_local.site.sitecode }}"
 
 # Site specific
-- include_vars: site_{{ ansible_local.site.sitecode }}.yml
+- include_vars: vars/sites/tulssite_{{ ansible_local.site.sitecode }}.yml
+- include_vars: vars/sites/tulssite_{{ ansible_local.site.sitecode }}.yml
 
 # Task that sets the timezone and configures chrony
-- import_tasks: time.yml
+- import_tasks: subtasks/time.yml
+- import_tasks: subtasks/sshd.yml
