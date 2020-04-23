@@ -17,10 +17,10 @@ Common:
     banner_file: /etc/motd
     client_interval: 0
     client_countmax: 3
-    log_level: VERBOSE
+    log_level: INFO
     login_grace: 120
     max_sessions: 4
-    permit_root: yes
-    x11_forward: no
-    tcp_forward: yes
+    permit_root: "yes"
+    x11_forward: "no"
+    tcp_forward: "yes"
   time_zone: "America/Chicago"
