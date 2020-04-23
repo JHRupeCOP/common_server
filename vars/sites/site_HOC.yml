@@ -15,14 +15,10 @@ Common:
     banner_file: /etc/motd
     client_interval: 0
     client_countmax: 3
-    log_level: VERBOSE
+    log_level: INFO
     login_grace: 120
     max_sessions: 4
-    permit_root: yes
-    x11_forward: no
-    tcp_forward: yes
-    host_keys:
-      - ssh_host_ecdsa_key
-      - ssh_host_ed25519_key
-      - ssh_host_rsa_key
+    permit_root: !!str yes
+    x11_forward: !!str no
+    tcp_forward: !!str yes
   time_zone: "America/Chicago"
