@@ -1,7 +1,7 @@
 ---
 # handlers file for common_server
 
-name: restart sshd
+- name: restart sshd
   service: "name=sshd state=restarted"
 
 - name: restart chrony
