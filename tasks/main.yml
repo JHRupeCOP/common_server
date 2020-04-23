@@ -6,7 +6,6 @@
 
 # Site specific
 - include_vars: vars/sites/site_{{ ansible_local.site.sitecode }}.yml
-- include_vars: vars/sites/site_{{ ansible_local.site.sitecode }}.yml
 
 # Task that sets the timezone and configures chrony
 - import_tasks: subtasks/time.yml

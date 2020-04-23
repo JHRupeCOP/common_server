@@ -1,8 +1,5 @@
 ---
 
-- debug:
-    msg:
-      - "SSHD host keys: {{ Common.SSHD.}}"
 - name: Updating SSHD host key permissions
   file:
     path: "/etc/ssh/{{ item }}"
