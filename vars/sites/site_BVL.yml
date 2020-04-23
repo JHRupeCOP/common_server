@@ -20,7 +20,7 @@ Common:
     log_level: INFO
     login_grace: 120
     max_sessions: 4
-    permit_root: "yes"
-    x11_forward: "no"
-    tcp_forward: "yes"
+    permit_root: !!str yes
+    x11_forward: !!str no
+    tcp_forward: !!str yes
   time_zone: "America/Chicago"
