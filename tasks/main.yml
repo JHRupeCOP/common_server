@@ -9,4 +9,7 @@
 
 # Task that sets the timezone and configures chrony
 - import_tasks: subtasks/time.yml
+# Configures SSHD
 - import_tasks: subtasks/sshd.yml
+# Adds default user groups
+- import_tasks: subtasks/groups.yml
