@@ -6,21 +6,8 @@ Common:
     - bvlntp2.conocophillips.net
     - hountp1.conocophillips.net
   dns:
-    domain:
-      - conocophillips.net
-      - conoco.net
     server:
       - 158.139.212.31
       - 158.139.213.59
       - 158.139.110.76
-  SSHD:
-    banner_file: /etc/motd
-    client_interval: 0
-    client_countmax: 3
-    log_level: INFO
-    login_grace: 120
-    max_sessions: 4
-    permit_root: !!str yes
-    x11_forward: !!str no
-    tcp_forward: !!str yes
   time_zone: "America/Chicago"

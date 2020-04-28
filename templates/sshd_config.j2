@@ -6,7 +6,7 @@ AcceptEnv LC_IDENTIFICATION LC_ALL
 AddressFamily any
 AllowTcpForwarding {{ Common.SSHD.tcp_forward }}
 # Banner {{ Common.SSHD.banner_file }}
-ChallengeResponseAuthentication yes
+ChallengeResponseAuthentication {{ Common.SSHD.chall_res_auth }}
 # Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
 ClientAliveInterval {{ Common.SSHD.client_interval }}
 ClientAliveCountMax {{ Common.SSHD.client_countmax }}
