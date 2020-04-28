@@ -1,13 +1,14 @@
 ---
+# COP Ansible
+ansible_managed: "Ansible managed via Satellite"
 # defaults file for common_server
-SSHD:
-  banner_file: /etc/motd
-  chall_res_auth: !!str yes
-  client_countmax: 3
-  client_interval: 0
-  login_grace: 120
-  log_level: INFO
-  max_sessions: 4
-  permit_root: !!str yes
-  tcp_forward: !!str yes
-  x11_forward: !!str no
+sshd_banner_file: /etc/motd
+sshd_chall_res_auth: !!str yes
+sshd_client_countmax: 3
+sshd_client_interval: 0
+sshd_login_grace: 120
+sshd_log_level: INFO
+sshd_max_sessions: 4
+sshd_permit_root: !!str yes
+sshd_tcp_forward: !!str yes
+sshd_x11_forward: !!str no
