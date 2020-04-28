@@ -14,15 +14,4 @@ Common:
       - 158.139.110.76
       - 158.139.44.10
       - 158.139.212.31
-  SSHD:
-    banner_file: /etc/motd
-    chall_res_auth: !!str yes
-    client_countmax: 3
-    client_interval: 0
-    login_grace: 120
-    log_level: INFO
-    max_sessions: 4
-    permit_root: !!str yes
-    tcp_forward: !!str yes
-    x11_forward: !!str no
   time_zone: "America/Chicago"

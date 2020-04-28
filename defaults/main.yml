@@ -1,2 +1,13 @@
 ---
 # defaults file for common_server
+SSHD:
+  banner_file: /etc/motd
+  chall_res_auth: !!str yes
+  client_countmax: 3
+  client_interval: 0
+  login_grace: 120
+  log_level: INFO
+  max_sessions: 4
+  permit_root: !!str yes
+  tcp_forward: !!str yes
+  x11_forward: !!str no

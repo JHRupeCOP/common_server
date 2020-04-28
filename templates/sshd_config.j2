@@ -4,12 +4,12 @@ AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
 AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
 AcceptEnv LC_IDENTIFICATION LC_ALL
 AddressFamily any
-AllowTcpForwarding {{ Common.SSHD.tcp_forward }}
-# Banner {{ Common.SSHD.banner_file }}
-ChallengeResponseAuthentication {{ Common.SSHD.chall_res_auth }}
+AllowTcpForwarding {{ SSHD.tcp_forward }}
+# Banner {{ SSHD.banner_file }}
+ChallengeResponseAuthentication {{ SSHD.chall_res_auth }}
 # Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
-ClientAliveInterval {{ Common.SSHD.client_interval }}
-ClientAliveCountMax {{ Common.SSHD.client_countmax }}
+ClientAliveInterval {{ SSHD.client_interval }}
+ClientAliveCountMax {{ SSHD.client_countmax }}
 GSSAPIAuthentication yes
 GSSAPICleanupCredentials yes
 HostbasedAuthentication no
@@ -19,16 +19,16 @@ HostKey /etc/ssh/ssh_host_ed25519_key
 IgnoreRhosts yes
 IgnoreUserKnownHosts no
 # KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256
-LogLevel {{ Common.SSHD.log_level }}
-LoginGraceTime {{ Common.SSHD.login_grace }}
+LogLevel {{ SSHD.log_level }}
+LoginGraceTime {{ SSHD.login_grace }}
 # MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-256
 # MaxAuthTries 4
-# MaxSessions {{ Common.SSHD.max_sessions }}
+# MaxSessions {{ SSHD.max_sessions }}
 # MaxStartups 10:30:60
 # PasswordAuthentication yes
 PermitEmptyPasswords no
 # PermitUserEnvironment no
-PermitRootLogin {{ Common.SSHD.permit_root }}
+PermitRootLogin {{ SSHD.permit_root }}
 PermitTunnel no
 Port 22
 PrintMotd no
