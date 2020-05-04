@@ -1,0 +1,24 @@
+---
+- name: Update ROOT GECOS
+  user:
+    name: root
+    comment: root@{{ ansible_hostname }}
+    password: "{{ 'password' | password_hash('sha512') }}"
+
+- name: Create SSERVIC
+  user:
+    name: sservic
+    state: present
+    comment: "Security Services"
+    uid: 9662
+    group: user66
+    shell: /bin/bash
+    create_home: yes
+    home: /usr/sservic
+    password: "{{ 'password' | password_hash('sha512') }}"
+
+- name: Update password options
+  command: chage -E -1 -m 0 -M 90 -W 7 {{ item }}
+  loop:
+    - root
+    - sservic

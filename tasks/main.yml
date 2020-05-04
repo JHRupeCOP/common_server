@@ -13,3 +13,5 @@
 - import_tasks: subtasks/sshd.yml
 # Adds default user groups
 - import_tasks: subtasks/groups.yml
+# Update System admin accounts
+- import_tasks: subtasks/system_admins.yml
