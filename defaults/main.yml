@@ -1,6 +1,10 @@
 ---
 # COP Ansible
 ansible_managed: "Ansible managed via Satellite"
+
+# Default site code is BVL
+sitecode: BVL
+
 # defaults file for common_server
 sshd_banner_file: /etc/motd
 sshd_chall_res_auth: !!str yes
