@@ -1,0 +1,46 @@
+---
+- name: Install Default RHEL Packages
+  yum:
+    name: "{{ packages }}"
+    state: latest
+  vars:
+    packages:
+    - bash-completion
+    - bash-doc
+    - bc
+    - ksh
+    - nfs-utils
+    - nfs4-acl-tools
+    - openscap-scanner
+    - pinfo
+    - rsync
+    - sysstat
+    - vim-enhanced
+    - yum-utils
+
+    - name: Install Default RHEL 7 Packages
+      yum:
+        name: "{{ packages }}"
+        state: latest
+      vars:
+        packages:
+        - "@Compatibility Libraries"
+        - "@Performance Tools"
+      when:
+        - ansible_facts['distribution'] == "RedHat" or ansible_facts['distribution'] == "CentOS"
+        - ansible_facts['distribution_major_version'] == "7"
+
+    - name: Install Default RHEL 8 Packages
+      yum:
+        name: "{{ packages }}"
+        state: latest
+      vars:
+        packages:
+        - "@Security Tools"
+        - autofs
+        - iotop
+        - tuned-profiles-cpu-partitioning
+        - tuned-utils
+      when:
+        - ansible_facts['distribution'] == "RedHat" or ansible_facts['distribution'] == "CentOS"
+        - ansible_facts['distribution_major_version'] == "8"
