@@ -16,4 +16,6 @@
 # Update System admin accounts
 - import_tasks: subtasks/system_admins.yml
 # Default packages
-- import_tasks: subtasks/packages.yml 
+- import_tasks: subtasks/packages.yml
+# Base files
+- import_tasks: subtasks/files.yml
