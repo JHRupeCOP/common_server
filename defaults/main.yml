@@ -2,7 +2,7 @@
 # COP Ansible
 ansible_managed: "Ansible managed via Satellite"
 
-# Use the variables below to determine site and application type
+# Default site code 
 site-code: BVL
 
 # defaults file for common_server
