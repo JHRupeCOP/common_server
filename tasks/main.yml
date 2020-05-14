@@ -1,8 +1,8 @@
 ---
 # Debug/sanity
-- name: "Ansible | List all known variables and facts"
-  debug:
-    var: hostvars[inventory_hostname]
+# - name: "Ansible | List all known variables and facts"
+#   debug:
+#    var: hostvars[inventory_hostname]
 
 # Site specific
 - include_vars: vars/sites/site_{{ sitecode }}.yml

@@ -3,7 +3,7 @@
 ansible_managed: "Ansible managed via Satellite"
 
 # Default site code 
-site-code: BVL
+sitecode: BVL
 
 # defaults file for common_server
 sshd_banner_file: /etc/motd
