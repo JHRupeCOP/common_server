@@ -1,21 +1,5 @@
 ---
 # Common mount points
-- name: Create /usr/ust mount point
-  file:
-    path: /usr/ust
-    state: directory
-    owner: root
-    group: root
-    mode: '2755'
-
-- name: Create /globalUnix mount point
-  file:
-    path: /globalUnix
-    state: directory
-    owner: root
-    group: root
-    mode: '0755'
-
 # Default directories
 - name: Create tmp history
   file:
