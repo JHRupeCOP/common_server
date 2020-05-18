@@ -12,7 +12,7 @@
     mode: 0644
     backup: yes
   notify:
-    - reload NetworkManager
+    - restart NetworkManager
 
 - name: configure resolv.conf
   template:
@@ -22,4 +22,4 @@
     group: root
     mode: '0644'
   notify:
-    - reload NetworkManager
+    - restart NetworkManager
