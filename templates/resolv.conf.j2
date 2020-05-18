@@ -1,9 +1,9 @@
 # {{ ansible_managed }}
 
 # Add DNS domains
-{% for dns_domain in Common.dns.domain %}
-search {{ dns_domain }}
-{% endfor %}
+{% if Common.dns.domain | length > 0 %}
+search {{ Common.dns.domain|join(' ') }}
+{% endif %}
 options rotate timeout:1
 {% for dns_server in Common.dns.server %}
 nameserver {{ dns_server }}
