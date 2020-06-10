@@ -8,6 +8,8 @@
     - bash-completion
     - bash-doc
     - bc
+    - bind-utils
+    - ftp
     - ksh
     - nfs-utils
     - nfs4-acl-tools
