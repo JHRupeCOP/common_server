@@ -2,10 +2,16 @@
 # handlers file for common_server
 
 - name: restart sshd
-  service: "name=sshd state=restarted"
+  service:
+    name: sshd
+    state: restarted
 
 - name: restart chrony
-  service: "name=chronyd state=restarted"
+  service:
+    name: chronyd 
+    state: restarted
 
 - name: restart NetworkManager
-  service: "name=NetworkManager state=restarted"
+  service:
+    name: NetworkManager
+    state: restarted
