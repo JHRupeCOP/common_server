@@ -2,7 +2,7 @@
 # COP Ansible
 ansible_managed: "Ansible managed via Satellite"
 
-# Default site code 
+# Default site code
 sitecode: BVL
 
 # defaults file for common_server
@@ -13,6 +13,6 @@ sshd_client_interval: 0
 sshd_login_grace: 120
 sshd_log_level: INFO
 sshd_max_sessions: 4
-sshd_permit_root: !!str yes
+sshd_permit_root: !!str no
 sshd_tcp_forward: !!str yes
 sshd_x11_forward: !!str no
